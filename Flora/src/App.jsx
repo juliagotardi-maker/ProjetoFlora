@@ -1,7 +1,7 @@
 import './header.css'
 import './App.css'
 import './footer.css'
-import './main.css'
+import Main from './main.css'
 import Header from './header.css'
 
 
@@ -9,9 +9,7 @@ import Header from './header.css'
  function App()
  {
    return{
-    <header/>
-
-    <main></main>
+  
 
    }
  }
