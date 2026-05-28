@@ -1,0 +1,39 @@
+/* HEADER / NAVBAR */
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 25px 8%;
+  background: white;
+}
+
+.navbar h1{
+  color: #5e6b5e;
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar nav{
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: #3d3d3d;
+
+  transition: 0.3s;
+}
+
+.navbar a:hover{
+  color: #d98fa3;
+}
+
+.icons{
+  display: flex;
+  gap: 15px;
+
+  font-size: 20px;
+  cursor: pointer;
+}

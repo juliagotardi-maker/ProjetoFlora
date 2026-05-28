@@ -9,7 +9,7 @@ export default function ChatBot() {
   const [messages, setMessages] = useState([
     {
       role: "assistant",
-      content: "Olá 🌷 Como posso ajudar você hoje?"
+      content: "Olá! Como posso ajudar você hoje?"
     }
   ]);
 
