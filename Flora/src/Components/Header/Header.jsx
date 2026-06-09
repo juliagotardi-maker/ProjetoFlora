@@ -1,7 +1,6 @@
-import Header from "../Header.jsx"
 import logo from "../assets/logo.png";
 import Footer from "../Footer/Footer.jsx"
-import conta from "../../assets/conta.png";
+import conta from "./assets/Conta.png";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { usuarioLogado, logout } from "../../services/auth";
@@ -276,7 +275,6 @@ export default function Header() {
             </div> 
         </div> 
     </div> )} 
-</div> 
-</Header> 
+</header> 
 ); 
 }
