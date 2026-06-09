@@ -1,68 +1,39 @@
-import { useState } from "react";
 import "./header.css";
-
 import logo from "../../assets/logo.png";
 import conta from "../../assets/Conta.png";
 
 export default function Header() {
-  const [menu, setMenu] = useState(false);
-  const [perfil, setPerfil] = useState(false);
-
   return (
-    <header>
-      <button
-        className="btn-menu"
-        onClick={() => setMenu(!menu)}
-      >
-        ☰
-      </button>
+    <>
+      <div className="top-bar">
+        🚚 Entregamos para todo o Brasil
+      </div>
 
-      <img
-        src={logo}
-        alt="Flora"
-        className="logo"
-      />
+      <header className="header">
 
-      <p className="bemvindo">
-        🌷 Bem-vindo à Flora
-      </p>
+        <img
+          src={logo}
+          alt="Flora"
+          className="logo"
+        />
 
-      <img
-        src={conta}
-        alt="Conta"
-        className="login"
-        onClick={() => setPerfil(!perfil)}
-      />
+        <nav className="menu">
+          <a href="#">Buquês</a>
+          <a href="#">Arranjos</a>
+          <a href="#">Plantas</a>
+          <a href="#">Paisagismo</a>
+          <a href="#">Presentes</a>
+        </nav>
 
-      {menu && (
-        <div className="links-menu">
-          <button>Início</button>
-          <button>Buquês</button>
-          <button>Plantas</button>
-          <button>Vasos</button>
-          <button>Presentes</button>
+        <div className="header-icons">
+          <img
+            src={conta}
+            alt="Conta"
+            className="icon-user"
+          />
         </div>
-      )}
 
-      {perfil && (
-        <div className="menu-perfil">
-          <div className="perfil-container">
-            <img
-              src={conta}
-              alt="Perfil"
-              className="avatar-img"
-            />
-
-            <h3 className="perfil-titulo">
-              Cliente Flora
-            </h3>
-
-            <button className="btn-criar-conta">
-              Entrar
-            </button>
-          </div>
-        </div>
-      )}
-    </header>
+      </header>
+    </>
   );
 }

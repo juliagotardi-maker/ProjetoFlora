@@ -1,111 +1,61 @@
-header{
-  background: white;
-  padding: 20px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+.top-bar{
+  background:#5e6b5e;
+  color:white;
+  height:40px;
+
+  display:flex;
+  align-items:center;
+
+  padding:0 8%;
+  font-size:14px;
+}
+
+.header{
+  background:white;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:25px 8%;
+
+  border-bottom:1px solid #eee;
 }
 
 .logo{
-  width: 150px;
-  cursor: pointer;
+  width:170px;
 }
 
-.bemvindo{
-  color: #5e6b5e;
-  font-weight: bold;
+.menu{
+  display:flex;
+  gap:35px;
 }
 
-.login{
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  cursor: pointer;
+.menu a{
+  text-decoration:none;
+  color:#5e6b5e;
+  font-weight:500;
+  transition:.3s;
 }
 
-.btn-menu{
-  background: none;
-  border: none;
-  font-size: 28px;
-  color: #d98fa3;
-  cursor: pointer;
+.menu a:hover{
+  color:#d98fa3;
 }
 
-.links-menu{
-  position: absolute;
-  top: 80px;
-  left: 30px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  background: white;
-  padding: 20px;
-
-  border-radius: 15px;
-
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+.icon-user{
+  width:40px;
+  cursor:pointer;
 }
 
-.links-menu button{
-  background: none;
-  border: none;
-  text-align: left;
-  cursor: pointer;
+@media(max-width:900px){
 
-  color: #555;
-  font-size: 16px;
-}
+  .header{
+    flex-direction:column;
+    gap:20px;
+  }
 
-.links-menu button:hover{
-  color: #d98fa3;
-}
-
-.menu-perfil{
-  position: absolute;
-  top: 80px;
-  right: 30px;
-
-  background: white;
-  padding: 20px;
-
-  border-radius: 20px;
-
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-
-  min-width: 220px;
-}
-
-.perfil-container{
-  text-align: center;
-}
-
-.avatar-img{
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.perfil-titulo{
-  margin: 15px 0;
-  color: #5e6b5e;
-}
-
-.btn-criar-conta{
-  background: #d98fa3;
-  color: white;
-
-  border: none;
-  border-radius: 20px;
-
-  padding: 10px 20px;
-
-  cursor: pointer;
-}
-
-.btn-criar-conta:hover{
-  opacity: 0.9;
+  .menu{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
 }
