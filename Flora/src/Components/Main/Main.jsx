@@ -1,9 +1,13 @@
-import Card from "../Card/Card";
-import buque from "../../assets/buque.jpg";
+import "./main.css";
+import banner from "../../assets/banner.png"
+import buque from "../../assets/buque.png";
 import arranjo from "../../assets/arranjo.jpg";
 import planta from "../../assets/planta.jpg";
 import paisagismo from "../../assets/paisagismo.jpg";
 import presente from "../../assets/presente.jpg";
+import CardCategoria from "../Cards/Card";
+
+
 export default function Main() {
   return (
     <main>
@@ -30,7 +34,7 @@ export default function Main() {
 
         <div className="hero-image">
           <img
-          src={buque}
+          src={banner}
           alt="Buquê"
         />
         </div>
@@ -39,33 +43,32 @@ export default function Main() {
 
       <section className="categorias">
 
-        <p className="subtitulo">
-          ESCOLHA O QUE MAIS COMBINA
-        </p>
-
-        <h2>Nossas categorias</h2>
-
         <div className="categoria-grid">
 
-          <div className="categoria-card">
-            <h3>💐 Buquês</h3>
-          </div>
+        <CardCategoria
+          imagem={buque}
+          titulo="Buquês"
+        />
 
-          <div className="categoria-card">
-            <h3>🌷 Arranjos</h3>
-          </div>
+        <CardCategoria
+          imagem={arranjo}
+          titulo="Arranjos"
+        />
 
-          <div className="categoria-card">
-            <h3>🪴 Plantas</h3>
-          </div>
+        <CardCategoria
+          imagem={planta}
+          titulo="Plantas"
+        />
 
-          <div className="categoria-card">
-            <h3>🌳 Paisagismo</h3>
-          </div>
+        <CardCategoria
+          imagem={paisagismo}
+          titulo="Paisagismo"
+        />
 
-          <div className="categoria-card">
-            <h3>🎁 Presentes</h3>
-          </div>
+        <CardCategoria
+          imagem={presente}
+          titulo="Presentes"
+        />
 
         </div>
 
