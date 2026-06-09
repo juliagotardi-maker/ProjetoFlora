@@ -1,5 +1,9 @@
-import "./main.css";
-
+import Card from "../Card/Card";
+import buque from "../../assets/buque.jpg";
+import arranjo from "../../assets/arranjo.jpg";
+import planta from "../../assets/planta.jpg";
+import paisagismo from "../../assets/paisagismo.jpg";
+import presente from "../../assets/presente.jpg";
 export default function Main() {
   return (
     <main>
@@ -26,9 +30,9 @@ export default function Main() {
 
         <div className="hero-image">
           <img
-            src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd"
-            alt="Buquê"
-          />
+          src={buque}
+          alt="Buquê"
+        />
         </div>
 
       </section>
