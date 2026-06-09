@@ -1,38 +1,111 @@
-
-.navbar{
+header{
+  background: white;
+  padding: 20px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 25px 8%;
-  background: white;
+  position: relative;
 }
 
-.navbar h1{
+.logo{
+  width: 150px;
+  cursor: pointer;
+}
+
+.bemvindo{
   color: #5e6b5e;
-  font-family: 'Playfair Display', serif;
+  font-weight: bold;
 }
 
-.navbar nav{
+.login{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn-menu{
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #d98fa3;
+  cursor: pointer;
+}
+
+.links-menu{
+  position: absolute;
+  top: 80px;
+  left: 30px;
+
   display: flex;
-  gap: 25px;
+  flex-direction: column;
+  gap: 10px;
+
+  background: white;
+  padding: 20px;
+
+  border-radius: 15px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.navbar a{
-  text-decoration: none;
-  color: #3d3d3d;
+.links-menu button{
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
 
-  transition: 0.3s;
+  color: #555;
+  font-size: 16px;
 }
 
-.navbar a:hover{
+.links-menu button:hover{
   color: #d98fa3;
 }
 
-.icons{
-  display: flex;
-  gap: 15px;
+.menu-perfil{
+  position: absolute;
+  top: 80px;
+  right: 30px;
 
-  font-size: 20px;
+  background: white;
+  padding: 20px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+  min-width: 220px;
+}
+
+.perfil-container{
+  text-align: center;
+}
+
+.avatar-img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.perfil-titulo{
+  margin: 15px 0;
+  color: #5e6b5e;
+}
+
+.btn-criar-conta{
+  background: #d98fa3;
+  color: white;
+
+  border: none;
+  border-radius: 20px;
+
+  padding: 10px 20px;
+
   cursor: pointer;
+}
+
+.btn-criar-conta:hover{
+  opacity: 0.9;
 }

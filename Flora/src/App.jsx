@@ -1,12 +1,13 @@
-import './App.css'
-import Header from './Components/Header/Header.jsx'
-import Main from './Components/Main/Main.jsx'
-import Footer from './Components/Footer/Footer.jsx'
+import Header from "./Components/Header/Header";
+import Main from "./Components/Main/Main";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
     <>
-      <h1>Flora 🌷</h1>
+      <Header />
+      <Main />
+      <Footer />
     </>
   );
 }
