@@ -1,44 +1,23 @@
 import "./main.css";
+import CardCategoria from "../Cards/Card";
+import banner from "../../assets/banner.png"
 import buque from "../../assets/buque.png";
 import arranjo from "../../assets/arranjo.jpg";
 import planta from "../../assets/planta.jpg";
 import paisagismo from "../../assets/paisagismo.jpg";
 import presente from "../../assets/presente.jpg";
-import CardCategoria from "../Cards/Card";
-import { useState, useEffect } from "react";
-import banner1 from "../../assets/banner.jpg";
-import banner2 from "../../assets/banner2.jpg";
-import banner3 from "../../assets/banner3.jpg";
 
 
 export default function Main() {
   return (
     <main>
 
-      <section className="hero">
+      <section className="Carrrossel">
 
-        <div className="hero-text">
-
-          <span>TRANSFORME MOMENTOS</span>
-
-          <h1>
-            Flores que
-            emocionam
-          </h1>
-
-          <p>
-            Buquês, arranjos e plantas para celebrar,
-            presentear e decorar com amor.
-          </p>
-
-          <button>COMPRAR AGORA</button>
-
-        </div>
-
-        <div className="hero-image">
-          <img
+        <div className="Carrossel-image">
+          <img 
           src={banner}
-          alt="Buquê"
+          alt="Banner"
         />
         </div>
 

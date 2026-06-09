@@ -49,8 +49,8 @@ main{
   cursor:pointer;
 }
 
-.hero-image{
-  width:55%;
+.Carrossel-image img{
+  width:70%;
 }
 
 .hero-image img{
