@@ -1,0 +1,67 @@
+.carousel{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+}
+
+.banner-slide{
+  width:100%;
+  height:650px;
+  object-fit:cover;
+  display:block;
+}
+
+.btn-slide{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+
+  width:55px;
+  height:55px;
+
+  border:none;
+  border-radius:50%;
+
+  background:white;
+  cursor:pointer;
+
+  font-size:25px;
+
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+
+  z-index:10;
+}
+
+.left{
+  left:30px;
+}
+
+.right{
+  right:30px;
+}
+
+.indicadores{
+  position:absolute;
+  bottom:25px;
+
+  width:100%;
+
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+
+.dot{
+  width:12px;
+  height:12px;
+
+  border-radius:50%;
+
+  background:white;
+  opacity:.5;
+}
+
+.dot.active{
+  opacity:1;
+  background:#d98fa3;
+}
