@@ -4,26 +4,29 @@ export default function Main() {
   return (
     <main>
 
-      <section className="banner">
+      <section className="hero">
 
-        <div className="banner-texto">
-          <p>FLORICULTURA & PAISAGISMO</p>
+        <div className="hero-text">
+
+          <span>TRANSFORME MOMENTOS</span>
 
           <h1>
-            Flores que transformam momentos
+            Flores que
+            emocionam
           </h1>
 
-          <span>
-            Buquês, arranjos e presentes especiais
-            para quem você ama.
-          </span>
+          <p>
+            Buquês, arranjos e plantas para celebrar,
+            presentear e decorar com amor.
+          </p>
 
-          <button>Comprar Agora</button>
+          <button>COMPRAR AGORA</button>
+
         </div>
 
-        <div className="banner-imagem">
+        <div className="hero-image">
           <img
-            src="https://images.unsplash.com/photo-1520763185298-1b434c919102"
+            src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd"
             alt="Buquê"
           />
         </div>
@@ -32,23 +35,31 @@ export default function Main() {
 
       <section className="categorias">
 
-        <h2>Nossas Categorias</h2>
+        <p className="subtitulo">
+          ESCOLHA O QUE MAIS COMBINA
+        </p>
 
-        <div className="cards">
+        <h2>Nossas categorias</h2>
 
-          <div className="card">
+        <div className="categoria-grid">
+
+          <div className="categoria-card">
             <h3>💐 Buquês</h3>
           </div>
 
-          <div className="card">
+          <div className="categoria-card">
+            <h3>🌷 Arranjos</h3>
+          </div>
+
+          <div className="categoria-card">
             <h3>🪴 Plantas</h3>
           </div>
 
-          <div className="card">
-            <h3>🏺 Vasos</h3>
+          <div className="categoria-card">
+            <h3>🌳 Paisagismo</h3>
           </div>
 
-          <div className="card">
+          <div className="categoria-card">
             <h3>🎁 Presentes</h3>
           </div>
 
@@ -56,31 +67,37 @@ export default function Main() {
 
       </section>
 
-      <section className="produtos">
+      <section className="sobre">
 
-        <h2>Mais Vendidos</h2>
+        <div className="sobre-conteudo">
 
-        <div className="produtos-grid">
+          <p>SOBRE NÓS</p>
 
-          <div className="produto-card">
-            <h3>Buquê Rosé</h3>
-            <p>R$ 189,90</p>
-            <button>Adicionar ao Carrinho</button>
-          </div>
+          <h2>
+            Mais que flores,
+            criamos experiências
+          </h2>
 
-          <div className="produto-card">
-            <h3>Lírios Elegance</h3>
-            <p>R$ 149,90</p>
-            <button>Adicionar ao Carrinho</button>
-          </div>
+          <span>
+            Unimos flores, plantas e paisagismo
+            para levar beleza e significado
+            até você.
+          </span>
 
-          <div className="produto-card">
-            <h3>Orquídea Premium</h3>
-            <p>R$ 129,90</p>
-            <button>Adicionar ao Carrinho</button>
-          </div>
+          <button>
+            CONHEÇA NOSSA HISTÓRIA
+          </button>
 
         </div>
+
+      </section>
+
+      <section className="beneficios">
+
+        <div>🚚 Entrega para Lençois Paulista e Região</div>
+        <div>📅 Agendamento flexível</div>
+        <div>💳 Parcele em até 6x</div>
+        <div>🎁 Embalagem premium</div>
 
       </section>
 

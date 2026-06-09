@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <>
       <div className="top-bar">
-        🚚 Entregamos para todo o Brasil
+        🚚 Entregamos para Lençóis Paulista e Região
       </div>
 
       <header className="header">
