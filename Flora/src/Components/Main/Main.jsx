@@ -1,6 +1,6 @@
 import "./main.css";
 import CardCategoria from "../Cards/Card";
-import banner from "../../assets/banner.png"
+import Carrossel from "../Carrossel/Carrossel";
 import buque from "../../assets/buque.png";
 import arranjo from "../../assets/arranjo.jpg";
 import planta from "../../assets/planta.jpg";
@@ -12,16 +12,7 @@ export default function Main() {
   return (
     <main>
 
-      <section className="Carrrossel">
-
-        <div className="Carrossel-image">
-          <img 
-          src={banner}
-          alt="Banner"
-        />
-        </div>
-
-      </section>
+      <Carrossel />
 
       <section className="categorias">
 

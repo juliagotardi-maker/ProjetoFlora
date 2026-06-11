@@ -1,5 +1,5 @@
 .footer{
-  background:white;
+  background:#5e6b5e;
 
   text-align:center;
 
@@ -7,16 +7,16 @@
 }
 
 .footer h2{
-  color:#5e6b5e;
+  color:#ffffff;
   margin-bottom:15px;
 }
 
 .footer p{
-  color:#666;
+  color:#ffffff;
   margin-bottom:10px;
 }
 
 .footer span{
-  color:#999;
+  color:#ffffff;
   font-size:14px;
 }
