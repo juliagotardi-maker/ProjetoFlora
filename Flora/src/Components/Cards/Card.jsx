@@ -1,37 +1,35 @@
 import { useNavigate } from "react-router-dom";
-import "./card.css";
+import "./Card.css";
 
-export default function Card({
-  id,
-  nome,
-  preco,
-  quantidade,
-  descricao,
-  imagem
-}) {
+export default function Card({ produto }) {
   const navigate = useNavigate();
 
+  if (!produto) return null;
+
   return (
-    <div className="card-produto" onClick={() => navigate(`/produto/${id}`)}>
+    <div
+      className="card-produto"
+      onClick={() => navigate(`/produto/${produto.id_produto}`)}
+    >
+      <h3>{produto.nome}</h3>
 
-      <img src={imagem} alt={nome} className="produto-img" />
+      <p className="descricao">
+        {produto.descricao}
+      </p>
 
-      <div className="info">
+      <p className="preco">
+        R$ {produto.preco}
+      </p>
 
-        <h3>{nome}</h3>
+      <p className="estoque">
+        {produto.quantidade > 0
+          ? `Em estoque: ${produto.quantidade}`
+          : "Sem estoque"}
+      </p>
 
-        <p className="descricao">
-          {descricao?.slice(0, 60)}...
-        </p>
-
-        <p className="preco">R$ {preco}</p>
-
-        <p className="estoque">
-          {quantidade > 0 ? `Em estoque: ${quantidade}` : "Sem estoque"}
-        </p>
-
-      </div>
-
+      <button className="btn-ver">
+        Ver produto
+      </button>
     </div>
   );
 }
