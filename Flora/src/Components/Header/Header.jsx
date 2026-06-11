@@ -1,13 +1,14 @@
 import "./header.css";
 import logo from "../../assets/logo.png";
 import conta from "../../assets/Conta.png";
-import { Link } from "react-router-dom";
+import carrinho from "../../assets/carrinho.png"
+
 
 export default function Header() {
   return (
     <>
       <div className="top-bar">
-        🚚 Entregamos para Lençóis Paulista e Região
+        Localizados em Lençóis Paulista
       </div>
 
       <header className="header">
@@ -22,17 +23,31 @@ export default function Header() {
           <a href="#">Arranjos</a>
           <a href="#">Plantas</a>
           <a href="#">Paisagismo</a>
-          <a href="#">Presentes</a>
-        </nav>   
-      <div className="header-icons">
-      <Link to="/login">
-        <img
-          src={conta}
-          alt="Conta"
-          className="icon-user"
-        />
-      </Link>
-    </div>
+
+        </nav>
+
+        <div className="header-icons">
+
+          <div className="carrinho-container">
+          
+            <span className="badge">0</span>
+          
+            <img
+              src={carrinho}
+              alt="Carrinho"
+              className="icon-compra"
+            />
+        
+          </div>
+          
+          <img
+            src={conta}
+            alt="Conta"
+            className="icon-user"
+          />
+        
+        </div>
+
       </header>
     </>
   );

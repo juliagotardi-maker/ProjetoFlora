@@ -79,9 +79,13 @@ main{
 
 .categoria-grid{
   display:grid;
-  grid-template-columns:repeat(5,1fr);
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
+
   gap:20px;
 }
+
 
 .categoria-card{
   background:white;
@@ -176,4 +180,22 @@ main{
     grid-template-columns:1fr;
     gap:20px;
   }
+}
+.mais-vendidos{
+  padding:80px 8%;
+}
+
+.mais-vendidos h2{
+  text-align:center;
+  color:#5e6b5e;
+
+  margin-bottom:40px;
+}
+
+.produtos-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:25px;
 }

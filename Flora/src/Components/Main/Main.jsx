@@ -1,29 +1,23 @@
 import "./main.css";
 import CardCategoria from "../Cards/Card";
-import banner from "../../assets/banner.png"
+import Carrossel from "../Carrossel/Carrossel";
 import buque from "../../assets/buque.png";
 import arranjo from "../../assets/arranjo.jpg";
 import planta from "../../assets/planta.jpg";
 import paisagismo from "../../assets/paisagismo.jpg";
 import presente from "../../assets/presente.jpg";
+import { useState } from "react";
 
 
 export default function Main() {
+
   return (
     <main>
 
-      <section className="Carrrossel">
-
-        <div className="Carrossel-image">
-          <img 
-          src={banner}
-          alt="Banner"
-        />
-        </div>
-
-      </section>
-
+      <Carrossel />
+       
       <section className="categorias">
+        
 
         <div className="categoria-grid">
 
@@ -54,6 +48,31 @@ export default function Main() {
 
         </div>
 
+        <section className="mais-vendidos">
+
+        <h2>Mais Vendidos</h2>
+
+        <div className="produtos-grid">
+
+          <CardCategoria
+            imagem={buque}
+            titulo="Buquê Encanto"
+          />
+
+          <CardCategoria
+            imagem={arranjo}
+            titulo="Arranjo Tropical"
+          />
+
+          <CardCategoria
+            imagem={presente}
+            titulo="Cesta Especial"
+          />
+
+        </div>
+
+        </section>
+        
       </section>
 
       <section className="sobre">
