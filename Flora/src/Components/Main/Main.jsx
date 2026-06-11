@@ -1,111 +1,53 @@
 import "./main.css";
-import CardCategoria from "../Cards/Card";
 import Carrossel from "../Carrossel/Carrossel";
+import Card from "../Cards/Card";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 import buque from "../../assets/buque.png";
 import arranjo from "../../assets/arranjo.jpg";
 import planta from "../../assets/planta.jpg";
 import paisagismo from "../../assets/paisagismo.jpg";
 import presente from "../../assets/presente.jpg";
-import { useState } from "react";
-
 
 export default function Main() {
+  const [produtos, setProdutos] = useState([]);
+
+  const imagens = {
+    1: buque,
+    2: arranjo,
+    3: planta,
+    4: paisagismo,
+    5: presente,
+    101: buque,
+    102: arranjo,
+    103: presente
+  };
+
+  useEffect(() => {
+    axios.get("http://localhost:5024/api/produtos")
+      .then(res => setProdutos(res.data))
+      .catch(err => console.log(err));
+  }, []);
 
   return (
     <main>
 
       <Carrossel />
-       
-      <section className="categorias">
-        
 
-        <div className="categoria-grid">
+      <section className="produtos-grid">
 
-        <CardCategoria
-          imagem={buque}
-          titulo="Buquês"
-        />
-
-        <CardCategoria
-          imagem={arranjo}
-          titulo="Arranjos"
-        />
-
-        <CardCategoria
-          imagem={planta}
-          titulo="Plantas"
-        />
-
-        <CardCategoria
-          imagem={paisagismo}
-          titulo="Paisagismo"
-        />
-
-        <CardCategoria
-          imagem={presente}
-          titulo="Presentes"
-        />
-
-        </div>
-
-        <section className="mais-vendidos">
-
-        <h2>Mais Vendidos</h2>
-
-        <div className="produtos-grid">
-
-          <CardCategoria
-            imagem={buque}
-            titulo="Buquê Encanto"
+        {produtos.map((p) => (
+          <Card
+            key={p.id}
+            id={p.id}
+            nome={p.nome}
+            preco={p.preco}
+            quantidade={p.quantidade}
+            descricao={p.descricao}
+            imagem={imagens[p.id]}
           />
-
-          <CardCategoria
-            imagem={arranjo}
-            titulo="Arranjo Tropical"
-          />
-
-          <CardCategoria
-            imagem={presente}
-            titulo="Cesta Especial"
-          />
-
-        </div>
-
-        </section>
-        
-      </section>
-
-      <section className="sobre">
-
-        <div className="sobre-conteudo">
-
-          <p>SOBRE NÓS</p>
-
-          <h2>
-            Mais que flores,
-            criamos experiências
-          </h2>
-
-          <span>
-            Unimos flores, plantas e paisagismo
-            para levar beleza e significado
-            até você.
-          </span>
-
-          <button>
-            CONHEÇA NOSSA HISTÓRIA
-          </button>
-
-        </div>
-
-      </section>
-
-      <section className="beneficios">
-
-        <div>🚚 Entrega para Lençois Paulista e Região</div>
-        <div>📅 Agendamento flexível</div>
-        <div>💳 Parcele em até 6x</div>
-        <div>🎁 Embalagem premium</div>
+        ))}
 
       </section>
 
