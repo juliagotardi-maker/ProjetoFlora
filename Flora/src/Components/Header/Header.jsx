@@ -31,7 +31,7 @@ export default function Header() {
             alt="Conta"
             className="icon-user"
           />
-        </div>
+        </div> 
 
       </header>
     </>
