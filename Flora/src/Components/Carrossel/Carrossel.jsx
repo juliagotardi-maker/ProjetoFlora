@@ -40,14 +40,15 @@ export default function Carrossel() {
         id="voltar"
         onClick={voltar}
       >
-        ❮
+      
       </button>
 
       <button
         id="ir"
         onClick={proximo}
       >
-        ❯
+        
+
       </button>
     </div>
   );

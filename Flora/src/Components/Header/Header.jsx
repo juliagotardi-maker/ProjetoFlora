@@ -24,7 +24,7 @@ export default function Header() {
           <a href="#">Arranjos</a>
           <a href="#">Plantas</a>
           <a href="#">Paisagismo</a>
-          <a href="#">Presentes</a>
+
         </nav>
 
         <div className="header-icons">

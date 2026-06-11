@@ -36,10 +36,32 @@
   color:#5e6b5e;
   font-weight:600;
   transition:.3s;
+  position: relative;
 }
+
 
 .menu a:hover{
   color:#d98fa3;
+}
+
+.menu a::after{
+  content:"";
+
+  position:absolute;
+
+  width:0;
+  height:2px;
+
+  left:0;
+  bottom:-5px;
+
+  background:#d98fa3;
+
+  transition:.3s;
+}
+
+.menu a:hover::after{
+  width:100%;
 }
 
 .icon-user{

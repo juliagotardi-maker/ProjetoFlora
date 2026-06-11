@@ -1,6 +1,10 @@
 import "./card.css";
 
-export default function CardCategoria({ imagem, titulo }) {
+export default function CardCategoria({
+  imagem,
+  titulo,
+  aoClicar
+}) {
   return (
     <div className="categoria-card">
 
@@ -11,6 +15,13 @@ export default function CardCategoria({ imagem, titulo }) {
       />
 
       <h3>{titulo}</h3>
+
+     <button
+        className="btn-card"
+        onClick={aoClicar}
+      >
+        Ver produtos
+      </button>
 
     </div>
   );

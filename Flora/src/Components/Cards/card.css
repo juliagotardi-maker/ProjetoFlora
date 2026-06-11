@@ -51,3 +51,22 @@
   }
 
 }
+.btn-card{
+  margin:15px;
+
+  padding:10px 20px;
+
+  border:none;
+  border-radius:25px;
+
+  background:#d98fa3;
+  color:white;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.btn-card:hover{
+  background:#c6768d;
+}
