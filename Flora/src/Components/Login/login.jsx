@@ -8,7 +8,7 @@ export default function Login() {
   const [mostrarAviso, setMostrarAviso] = useState(false);
   const [mostrarSenha, setMostrarSenha] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const email = e.target.email.value;
@@ -20,7 +20,35 @@ export default function Login() {
     }
 
     setMostrarAviso(false);
-    alert("Login realizado com sucesso!");
+
+    try {
+      const response = await fetch("http://localhost:5024/api/Usuario/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          senha,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        alert(data); 
+      }
+
+      console.log("LOGIN OK:", data);
+
+      alert(data.mensagem);
+
+      localStorage.setItem("usuario", JSON.stringify(data));
+
+    } catch (error) {
+      console.error("Erro ao conectar com API:", error);
+      alert("Erro ao conectar com o servidor");
+    }
   };
 
   return (
@@ -49,7 +77,7 @@ export default function Login() {
               />
             </div>
 
-            <div className="input-group password-group">
+            <div className="input-group">
               <label>Senha</label>
 
               <div className="password-wrapper">
