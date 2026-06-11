@@ -1,22 +1,24 @@
 .footer{
   background:#5e6b5e;
+  color:white;
 
   text-align:center;
 
   padding:50px 20px;
 }
 
-.footer h2{
-  color:#ffffff;
-  margin-bottom:15px;
+.redes{
+  margin:20px 0;
+
+  display:flex;
+  justify-content:center;
+  gap:25px;
 }
 
-.footer p{
-  color:#ffffff;
-  margin-bottom:10px;
+.redes a{
+  color:white;
 }
 
-.footer span{
-  color:#ffffff;
-  font-size:14px;
+.redes a:hover{
+  color:#d98fa3;
 }

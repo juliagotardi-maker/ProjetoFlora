@@ -28,13 +28,13 @@
 
 .menu{
   display:flex;
-  gap:35px;
+  gap:55px;
 }
 
 .menu a{
   text-decoration:none;
   color:#5e6b5e;
-  font-weight:500;
+  font-weight:600;
   transition:.3s;
 }
 
@@ -43,10 +43,14 @@
 }
 
 .icon-user{
-  width:110px;
+  width:150px;
   cursor:pointer;
 }
 
+.icon-compra{
+  width:70px;
+  cursor:pointer;
+}
 @media(max-width:900px){
 
   .header{
@@ -58,4 +62,35 @@
     flex-wrap:wrap;
     justify-content:center;
   }
+}
+.header-icons{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.carrinho-container{
+  position:relative;
+}
+
+.badge{
+  position:absolute;
+
+  top:-5px;
+  right:-5px;
+
+  width:20px;
+  height:20px;
+
+  border-radius:50%;
+
+  background:#d98fa3;
+  color:white;
+
+  font-size:12px;
+  font-weight:bold;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }

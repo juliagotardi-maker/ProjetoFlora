@@ -1,12 +1,14 @@
 import "./header.css";
 import logo from "../../assets/logo.png";
 import conta from "../../assets/Conta.png";
+import carrinho from "../../assets/carrinho.png"
+
 
 export default function Header() {
   return (
     <>
       <div className="top-bar">
-        🚚 Entregamos para Lençóis Paulista e Região
+        Localizados em Lençóis Paulista
       </div>
 
       <header className="header">
@@ -26,12 +28,26 @@ export default function Header() {
         </nav>
 
         <div className="header-icons">
+
+          <div className="carrinho-container">
+          
+            <span className="badge">0</span>
+          
+            <img
+              src={carrinho}
+              alt="Carrinho"
+              className="icon-compra"
+            />
+        
+          </div>
+          
           <img
             src={conta}
             alt="Conta"
             className="icon-user"
           />
-        </div> 
+        
+        </div>
 
       </header>
     </>
