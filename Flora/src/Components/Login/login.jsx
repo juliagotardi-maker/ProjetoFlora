@@ -1,12 +1,19 @@
 import "./login.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import Main from "../Main/Main";
 import { useState } from "react";
+import axios from "axios";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [mostrarAviso, setMostrarAviso] = useState(false);
   const [mostrarSenha, setMostrarSenha] = useState(false);
+  const [mensagem, setMensagem] = useState("");
+  const [tipoMensagem, setTipoMensagem] = useState("");
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,32 +29,27 @@ export default function Login() {
     setMostrarAviso(false);
 
     try {
-      const response = await fetch("http://localhost:5024/api/Usuario/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          senha,
-        }),
-      });
+      const response = await axios.post(
+        "http://localhost:5024/api/Login",
+        { email, senha }
+      );
 
-      const data = await response.json();
+      setMensagem(response.data.mensagem || "Login realizado com sucesso!");
+      setTipoMensagem("sucesso");
 
-      if (!response.ok) {
-        alert(data); 
-      }
+      localStorage.setItem("usuario", JSON.stringify(response.data));
 
-      console.log("LOGIN OK:", data);
+      navigate("/Main");
 
-      alert(data.mensagem);
-
-      localStorage.setItem("usuario", JSON.stringify(data));
-
+      navigate("/Main");
     } catch (error) {
-      console.error("Erro ao conectar com API:", error);
-      alert("Erro ao conectar com o servidor");
+      const mensagemErro =
+        error.response?.data?.mensagem ||
+        error.response?.data?.message ||
+        "Erro ao fazer login";
+
+      setMensagem(mensagemErro);
+      setTipoMensagem("erro");
     }
   };
 
@@ -56,57 +58,51 @@ export default function Login() {
       <Header />
 
       <div className="login-container">
-        <div className="login-left">
-          <h1>Bem-vinda ♡</h1>
+        <form className="login-form" onSubmit={handleSubmit}>
+          <h2>Login</h2>
 
-          <p>Entre para continuar e transformar momentos em memórias.</p>
-
-          {mostrarAviso && (
-            <div className="login-warning">
-              Todos os campos são obrigatórios.
+          {mensagem && (
+            <div className={`msg ${tipoMensagem}`}>
+              {mensagem}
             </div>
           )}
 
-          <form onSubmit={handleSubmit}>
-            <div className="input-group">
-              <label>E-mail</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="seuemail@exemplo.com"
-              />
-            </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Digite seu email"
+          />
 
-            <div className="input-group">
-              <label>Senha</label>
+          <div className="senha-container">
+            <input
+              type={mostrarSenha ? "text" : "password"}
+              name="senha"
+              placeholder="Digite sua senha"
+            />
 
-              <div className="password-wrapper">
-                <input
-                  type={mostrarSenha ? "text" : "password"}
-                  name="senha"
-                  placeholder="Digite sua senha"
-                />
+            <span onClick={() => setMostrarSenha(!mostrarSenha)}>
+              {mostrarSenha ? <FaEyeSlash /> : <FaEye />}
+            </span>
+          </div>
 
-                <span
-                  className="eye-icon"
-                  onClick={() => setMostrarSenha(!mostrarSenha)}
-                >
-                  {mostrarSenha ? <FaEyeSlash /> : <FaEye />}
-                </span>
-              </div>
-            </div>
+          {mostrarAviso && (
+            <p className="aviso">Preencha todos os campos!</p>
+          )}
 
-            <button type="submit">Entrar</button>
-          </form>
+          <button type="submit">Entrar 
+          </button>
 
           <div className="register">
-            <p>Ainda não possui uma conta?</p>
-
-            <button type="button" className="register-btn">
-              Criar Conta
+            <p>Não tem conta ainda?</p>
+            <button
+              type="button"
+              className="register-btn"
+              onClick={() => navigate("/cadastro")}
+            >
+              Criar conta
             </button>
           </div>
-        </div>
+        </form>
       </div>
 
       <Footer />
