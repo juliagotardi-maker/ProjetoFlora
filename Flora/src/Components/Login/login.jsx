@@ -1,5 +1,5 @@
 import "./login.css";
-import Header from "../Header/Header";
+import Header_login from "../Header_login/Header_login";
 import Footer from "../Footer/Footer";
 import Main from "../Main/Main";
 import { useState } from "react";
@@ -55,7 +55,7 @@ export default function Login() {
 
   return (
     <>
-      <Header />
+      <Header_login />
 
       <div className="login-container">
         <form className="login-form" onSubmit={handleSubmit}>

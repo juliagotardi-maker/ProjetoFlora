@@ -1,11 +1,11 @@
-import "./header.css";
+import "./header_login.css";
 import logo from "../../assets/logo.png";
 import conta from "../../assets/Conta.png";
 import carrinho from "../../assets/carrinho.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Header() {
+export default function Header_login() {
   const [abrirPopup, setAbrirPopup] = useState(false);
   const navigate = useNavigate();
 
@@ -18,13 +18,6 @@ export default function Header() {
       <header className="header">
         <img src={logo} alt="Flora" className="logo" />
 
-        <nav className="menu">
-          <a href="#">Buquês</a>
-          <a href="#">Arranjos</a>
-          <a href="#">Plantas</a>
-          <a href="#">Paisagismo</a>
-        </nav>
-
         <div className="header-icons">
 
           <div className="carrinho-container">
@@ -35,8 +28,6 @@ export default function Header() {
               className="icon-compra"
             />
           </div>
-
-          {/* CONTA + POPUP */}
           <div className="conta-container">
             <img
               src={conta}
