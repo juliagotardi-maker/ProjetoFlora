@@ -1,6 +1,7 @@
 import "./header.css";
 import logo from "../../assets/logo.png";
 import conta from "../../assets/Conta.png";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -10,7 +11,6 @@ export default function Header() {
       </div>
 
       <header className="header">
-
         <img
           src={logo}
           alt="Flora"
@@ -23,16 +23,16 @@ export default function Header() {
           <a href="#">Plantas</a>
           <a href="#">Paisagismo</a>
           <a href="#">Presentes</a>
-        </nav>
-
-        <div className="header-icons">
-          <img
-            src={conta}
-            alt="Conta"
-            className="icon-user"
-          />
-        </div>
-
+        </nav>   
+      <div className="header-icons">
+      <Link to="/login">
+        <img
+          src={conta}
+          alt="Conta"
+          className="icon-user"
+        />
+      </Link>
+    </div>
       </header>
     </>
   );

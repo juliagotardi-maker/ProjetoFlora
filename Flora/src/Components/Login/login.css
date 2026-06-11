@@ -1,0 +1,157 @@
+.login-container {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f5f1;
+  padding: 40px;
+}
+
+.login-left {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.login-left h1 {
+  font-size: 42px;
+  color: #5e6b5e;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-left p {
+  text-align: center;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.login-warning {
+  background: #ffeaea;
+  border: 1px solid #ffb3b3;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  color: #5e6b5e;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  padding: 15px;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #d98fa3;
+  box-shadow: 0 0 0 3px rgba(217, 143, 163, 0.2);
+}
+
+/* 👇 OLHINHO DA SENHA */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 45px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #777;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.eye-icon:hover {
+  color: #d98fa3;
+  transform: scale(1.1);
+}
+
+/* BOTÃO LOGIN */
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #d98fa3;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #c97c92;
+  transform: translateY(-2px);
+}
+
+/* REGISTRO */
+.register {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.register p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #d98fa3;
+  background: white;
+  color: #d98fa3;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background: #d98fa3;
+  color: white;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 20px;
+  }
+
+  .login-left {
+    padding: 30px;
+  }
+
+  .login-left h1 {
+    font-size: 32px;
+  }
+}
