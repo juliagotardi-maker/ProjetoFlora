@@ -6,6 +6,10 @@ import arranjo1 from "../../assets/arranjo1.png";
 import arranjo2 from "../../assets/arranjo2.png";
 import arranjo3 from "../../assets/arranjo3.png";
 import arranjo4 from "../../assets/arranjo4.png";
+import arranjo5 from "../../assets/arranjo5.png";
+import arranjo6 from "../../assets/arranjo6.png";
+import arranjo7 from "../../assets/arranjo7.png";
+import arranjo8 from "../../assets/arranjo8.png";
 
 export default function Arranjos() {
   return (
