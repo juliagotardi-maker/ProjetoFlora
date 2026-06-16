@@ -1,0 +1,22 @@
+.pagina-presentes {
+  padding: 50px;
+  min-height: 100vh;
+  background: #faf6f1;
+}
+
+.voltar {
+  text-decoration: none;
+  color: #5e6b5e;
+  font-weight: bold;
+}
+
+h1 {
+  color: #5e6b5e;
+  margin: 25px 0;
+}
+
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
