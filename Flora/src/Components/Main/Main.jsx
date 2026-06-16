@@ -8,7 +8,7 @@ export default function Main() {
   const [produtos, setProdutos] = useState([]);
 
 useEffect(() => {
-  axios.get("http://localhost:5024/api/Produto")
+  axios.get("http://localhost:5002/api/Produto")
     .then(res => {
       console.log("PRODUTOS API:", res.data);
       setProdutos(res.data);
@@ -17,7 +17,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <main>
+    <main className="main_pag_inicial">
 
       <Carrossel />
 

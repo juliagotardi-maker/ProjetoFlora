@@ -11,7 +11,7 @@ export default function Card({ produto }) {
       className="card-produto"
       onClick={() => navigate(`/produto/${produto.id_produto}`)}
     >
-      <h3>{produto.nome}</h3>
+      <h3 className="card-titulo">{produto.nome}</h3>
 
       <p className="descricao">
         {produto.descricao}

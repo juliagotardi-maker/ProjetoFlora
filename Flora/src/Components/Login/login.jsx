@@ -30,7 +30,7 @@ export default function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5024/api/Login",
+        "http://localhost:5002/api/Login",
         { email, senha }
       );
 
