@@ -7,35 +7,30 @@ import { useEffect, useState } from "react";
 export default function Main() {
   const [produtos, setProdutos] = useState([]);
 
-useEffect(() => {
-  axios.get("http://localhost:5002/api/Produto")
-    .then(res => {
-      console.log("PRODUTOS API:", res.data);
-      setProdutos(res.data);
-    })
-    .catch(err => console.log("ERRO:", err));
-}, []);
+  useEffect(() => {
+    axios
+      .get("http://localhost:5002/api/Produto")
+      .then((res) => {
+        setProdutos(res.data);
+      })
+      .catch((err) => console.log("ERRO:", err));
+  }, []);
 
   return (
     <main className="main_pag_inicial">
-
       <Carrossel />
 
-      <section className="produtos-grid">
+      <section className="produtos-section">
+        <h2 className="titulo-produtos">Mais vendidos</h2>
 
-        {produtos.length === 0 && (
-          <p>Carregando produtos...</p>
-        )}
+        <div className="produtos-grid">
+          {produtos.length === 0 && <p>Carregando produtos...</p>}
 
-        {produtos.map((p) => (
-          <Card
-            key={p.id_produto}
-            produto={p}
-          />
-        ))}
-
+          {produtos.map((p) => (
+            <Card key={p.id_produto} produto={p} />
+          ))}
+        </div>
       </section>
-
     </main>
   );
 }

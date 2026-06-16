@@ -11,25 +11,40 @@ export default function Card({ produto }) {
       className="card-produto"
       onClick={() => navigate(`/produto/${produto.id_produto}`)}
     >
-      <h3 className="card-titulo">{produto.nome}</h3>
+      <div className="card-imagem">
+        <img
+          src={produto.imagem}
+          alt={produto.nome}
+        />
+      </div>
 
-      <p className="descricao">
-        {produto.descricao}
-      </p>
+      <div className="card-info">
+        <h3 className="card-titulo">{produto.nome}</h3>
 
-      <p className="preco">
-        R$ {produto.preco}
-      </p>
+        <p className="descricao">
+          {produto.descricao}
+        </p>
 
-      <p className="estoque">
-        {produto.quantidade > 0
-          ? `Em estoque: ${produto.quantidade}`
-          : "Sem estoque"}
-      </p>
+        <p className="preco">
+          R$ {produto.preco}
+        </p>
 
-      <button className="btn-ver">
-        Ver produto
-      </button>
+        <p className="estoque">
+          {produto.quantidade >= 0
+            ? `Em estoque: ${produto.quantidade}`
+            : "Sem estoque"}
+        </p>
+
+        <button
+          className="btn-ver"
+          onClick={(e) => {
+            e.stopPropagation();
+            navigate(`/produto/${produto.id_produto}`);
+          }}
+        >
+          Ver produto
+        </button>
+      </div>
     </div>
   );
 }
