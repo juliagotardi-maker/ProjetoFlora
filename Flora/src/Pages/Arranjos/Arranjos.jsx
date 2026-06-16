@@ -23,10 +23,14 @@ export default function Arranjos() {
 
       <div className="grid-produtos">
 
-        <Carrinho imagem={arranjo1} nome="Arranjo Elegance" preco={189.90} />
-        <Carrinho imagem={arranjo2} nome="Arranjo Tropical" preco={159.90} />
-        <Carrinho imagem={arranjo3} nome="Arranjo Clássico" preco={199.90} />
-        <Carrinho imagem={arranjo4} nome="Arranjo Premium" preco={249.90} />
+        <Carrinho imagem={arranjo1} nome="Arranjo Rosângela" preco={189.90} />
+        <Carrinho imagem={arranjo2} nome="Arranjo Ana" preco={159.90} />
+        <Carrinho imagem={arranjo3} nome="Arranjo Maria Antônia" preco={199.90} />
+        <Carrinho imagem={arranjo4} nome="Arranjo Ângela" preco={249.90} />
+        <Carrinho imagem={arranjo1} nome="Arranjo Helena" preco={189.90} />
+        <Carrinho imagem={arranjo2} nome="Arranjo Isabel" preco={159.90} />
+        <Carrinho imagem={arranjo3} nome="Arranjo Luzia" preco={199.90} />
+        <Carrinho imagem={arranjo4} nome="Arranjo Elza" preco={249.90} />
 
       </div>
 
