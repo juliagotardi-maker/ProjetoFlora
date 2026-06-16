@@ -13,13 +13,7 @@ export default function Header() {
 
       <header className="header">
 
-<<<<<<< Updated upstream
-        <img
-          src={logo}
-          alt="Flora"
-          className="logo"
-        />
-=======
+
         <a href="#">
           <img
             src={logo}
@@ -27,7 +21,6 @@ export default function Header() {
             className="logo"
           />
         </a>
->>>>>>> Stashed changes
 
         <nav className="menu">
           <a href="#">Buquês</a>

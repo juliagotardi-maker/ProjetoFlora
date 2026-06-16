@@ -1,17 +1,14 @@
 import "./main.css";
-
-
 import { Link } from "react-router-dom";
+import Carrossel from "../Carrossel/Carrossel";
+import CardCategoria from "../Cards/Card";
 
-import Header from "./Components/Header/Header";
-import Main from "./Components/Main/Main";
-import Footer from "./Components/Footer/Footer";
-import Login from "./Components/Login/Login";
-
-import Buques from "./Pages/Buques/Buques";
-import Arranjos from "./Pages/Arranjos/Arranjos";
-import Paisagismo from "./Pages/Paisagismo/Paisagismo";
-import Presentes from "./Pages/Presentes/Presentes";
+import buque from "../../assets/buque.png";
+import arranjo from "../../assets/arranjo.jpg";
+import planta from "../../assets/planta.jpg";
+import paisagismo from "../../assets/paisagismo.jpg";
+import presente from "../../assets/presente.jpg";
+import { useState } from "react";
 
 
 export default function Main() {
