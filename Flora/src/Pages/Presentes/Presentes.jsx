@@ -13,7 +13,7 @@ export default function Presentes() {
     { nome: "Cesta Romântica", preco: 149.90, imagem: presente1 },
     { nome: "Kit Especial", preco: 189.90, imagem: presente2 },
     { nome: "Cesta Premium", preco: 249.90, imagem: presente3 },
-    { nome: "Box Surpresa", preco: 199.90, imagem: presente4 },
+    { nome: "Cesta Tpm", preco: 199.90, imagem: presente4 },
   ];
 
   return (

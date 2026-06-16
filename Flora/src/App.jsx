@@ -1,18 +1,15 @@
-import Header from "./Components/Header/Header.jsx";
-import Main from "./Components/Main/Main.jsx";
-import Footer from "./Components/Footer/Footer.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-<<<<<<< Updated upstream
-function App() {
-=======
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
-import Buques from "./Pages/Buques/Buques";
 
+import Buques from "./Pages/Buques/Buques";
+import Arranjos from "./Pages/Arranjos/Arranjos";
+import Paisagismo from "./Pages/Paisagismo/Paisagismo";
+import Presentes from "./Pages/Presentes/Presentes";
 function Home() {
->>>>>>> Stashed changes
   return (
     <>
       <Header />
@@ -22,9 +19,7 @@ function Home() {
   );
 }
 
-<<<<<<< Updated upstream
-export default App;
-=======
+
 function App() {
   return (
     <BrowserRouter>
@@ -39,4 +34,4 @@ function App() {
 }
 
 export default App;
->>>>>>> Stashed changes
+

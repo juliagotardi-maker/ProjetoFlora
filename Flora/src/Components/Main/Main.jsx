@@ -1,19 +1,17 @@
 import "./main.css";
-<<<<<<< Updated upstream
-=======
+
 
 import { Link } from "react-router-dom";
 
-import Carrossel from "../Carrossel/Carrossel";
->>>>>>> Stashed changes
-import CardCategoria from "../Cards/Card";
-import Carrossel from "../Carrossel/Carrossel";
-import buque from "../../assets/buque.png";
-import arranjo from "../../assets/arranjo.jpg";
-import planta from "../../assets/planta.jpg";
-import paisagismo from "../../assets/paisagismo.jpg";
-import presente from "../../assets/presente.jpg";
-import { useState } from "react";
+import Header from "./Components/Header/Header";
+import Main from "./Components/Main/Main";
+import Footer from "./Components/Footer/Footer";
+import Login from "./Components/Login/Login";
+
+import Buques from "./Pages/Buques/Buques";
+import Arranjos from "./Pages/Arranjos/Arranjos";
+import Paisagismo from "./Pages/Paisagismo/Paisagismo";
+import Presentes from "./Pages/Presentes/Presentes";
 
 
 export default function Main() {
@@ -28,32 +26,7 @@ export default function Main() {
 
         <div className="categoria-grid">
 
-<<<<<<< Updated upstream
-        <CardCategoria
-          imagem={buque}
-          titulo="Buquês"
-        />
 
-        <CardCategoria
-          imagem={arranjo}
-          titulo="Arranjos"
-        />
-
-        <CardCategoria
-          imagem={planta}
-          titulo="Plantas"
-        />
-
-        <CardCategoria
-          imagem={paisagismo}
-          titulo="Paisagismo"
-        />
-
-        <CardCategoria
-          imagem={presente}
-          titulo="Presentes"
-        />
-=======
           <Link to="/buques" className="link-categoria">
             <CardCategoria
               imagem={buque}
@@ -81,7 +54,7 @@ export default function Main() {
               titulo="Cestas & Presentes"
             />
           </Link>
->>>>>>> Stashed changes
+
 
         </div>
 
