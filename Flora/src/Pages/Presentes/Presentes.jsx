@@ -6,6 +6,10 @@ import presente1 from "../../assets/presente1.png";
 import presente2 from "../../assets/presente2.png";
 import presente3 from "../../assets/presente3.png";
 import presente4 from "../../assets/presente4.png";
+import presente1 from "../../assets/presente5.png";
+import presente2 from "../../assets/presente6.png";
+import presente3 from "../../assets/presente7.png";
+import presente4 from "../../assets/presente8.png";
 
 export default function Presentes() {
 
