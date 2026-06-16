@@ -23,13 +23,13 @@ export default function Buques() {
 
       <div className="grid-produtos">
 
-        <Carrinho imagem={buque1} nome="Buquê Encanto" preco={189.90} />
-        <Carrinho imagem={buque2} nome="Buquê Delicadeza" preco={159.90} />
-        <Carrinho imagem={buque3} nome="Buquê Luxo" preco={229.90} />
-        <Carrinho imagem={buque4} nome="Buquê Rosas Vermelhas" preco={199.90} />
-        <Carrinho imagem={buque5} nome="Buquê Rapunzel" preco={189.90} />
-        <Carrinho imagem={buque6} nome="Buquê Pocahontas" preco={159.90} />
-        <Carrinho imagem={buque7} nome="Buquê Mulan" preco={229.90} />
+        <Carrinho imagem={buque1} nome="Buquê Rita" preco={189.90} />
+        <Carrinho imagem={buque2} nome="Buquê Terezinha" preco={159.90} />
+        <Carrinho imagem={buque3} nome="Buquê Maria" preco={229.90} />
+        <Carrinho imagem={buque4} nome="Buquê José" preco={199.90} />
+        <Carrinho imagem={buque5} nome="Buquê Clarice" preco={189.90} />
+        <Carrinho imagem={buque6} nome="Buquê Cecília" preco={159.90} />
+        <Carrinho imagem={buque7} nome="Buquê Rosana" preco={229.90} />
 
       </div>
 
