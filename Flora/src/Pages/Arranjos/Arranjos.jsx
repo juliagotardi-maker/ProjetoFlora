@@ -1,4 +1,4 @@
-import "./Arranjos.css";
+import "./arranjos.css";
 import { Link } from "react-router-dom";
 import Carrinho from "../../Components/Carrinho/Carrinho";
 

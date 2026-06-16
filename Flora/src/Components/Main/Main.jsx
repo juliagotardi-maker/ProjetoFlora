@@ -1,7 +1,6 @@
 import "./main.css";
 
 import { Link } from "react-router-dom";
-
 import Carrossel from "../Carrossel/Carrossel";
 import CardCategoria from "../Cards/Card";
 
@@ -13,7 +12,6 @@ import presente from "../../assets/presentes.png";
 export default function Main() {
   return (
     <main>
-
       {/* CARROSSEL */}
       <Carrossel />
 
@@ -50,6 +48,7 @@ export default function Main() {
             />
           </Link>
 
+
         </div>
 
       </section>
@@ -59,23 +58,15 @@ export default function Main() {
 
         <div className="sobre-conteudo">
 
-          <p className="sobre-titulo">
-            SOBRE NÓS
-          </p>
+          <p>SOBRE NÓS</p>
 
-          <h2>
-            Mais que flores,
-            criamos experiências
-          </h2>
+          <h2>Mais que flores, criamos experiências</h2>
 
-          <p className="sobre-texto">
-            Unimos flores, plantas e paisagismo para levar beleza,
-            significado e momentos especiais até você.
-          </p>
+          <span>
+            Unimos flores, plantas e paisagismo para levar beleza e significado até você.
+          </span>
 
-          <button>
-            CONHEÇA NOSSA HISTÓRIA
-          </button>
+          <button>CONHEÇA NOSSA HISTÓRIA</button>
 
         </div>
 
@@ -85,9 +76,7 @@ export default function Main() {
       <section className="beneficios">
 
         <div>📍 Localizada em Lençóis Paulista - São Paulo</div>
-
         <div>📅 Agendamento flexível</div>
-
         <div>💳 Parcele em até 6x</div>
 
       </section>
