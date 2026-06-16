@@ -1,4 +1,11 @@
 import "./main.css";
+<<<<<<< Updated upstream
+=======
+
+import { Link } from "react-router-dom";
+
+import Carrossel from "../Carrossel/Carrossel";
+>>>>>>> Stashed changes
 import CardCategoria from "../Cards/Card";
 import Carrossel from "../Carrossel/Carrossel";
 import buque from "../../assets/buque.png";
@@ -21,6 +28,7 @@ export default function Main() {
 
         <div className="categoria-grid">
 
+<<<<<<< Updated upstream
         <CardCategoria
           imagem={buque}
           titulo="Buquês"
@@ -45,6 +53,35 @@ export default function Main() {
           imagem={presente}
           titulo="Presentes"
         />
+=======
+          <Link to="/buques" className="link-categoria">
+            <CardCategoria
+              imagem={buque}
+              titulo="Buquês"
+            />
+          </Link>
+
+          <Link to="/arranjos" className="link-categoria">
+            <CardCategoria
+              imagem={arranjo}
+              titulo="Arranjos"
+            />
+          </Link>
+
+          <Link to="/paisagismo" className="link-categoria">
+            <CardCategoria
+              imagem={paisagismo}
+              titulo="Paisagismo"
+            />
+          </Link>
+
+          <Link to="/presentes" className="link-categoria">
+            <CardCategoria
+              imagem={presente}
+              titulo="Cestas & Presentes"
+            />
+          </Link>
+>>>>>>> Stashed changes
 
         </div>
 
@@ -105,7 +142,6 @@ export default function Main() {
         <div>🚚 Entrega para Lençois Paulista e Região</div>
         <div>📅 Agendamento flexível</div>
         <div>💳 Parcele em até 6x</div>
-        <div>🎁 Embalagem premium</div>
 
       </section>
 

@@ -1,0 +1,30 @@
+.pagina-arranjos {
+  min-height: 100vh;
+  padding: 50px;
+  background: #faf8f6;
+}
+
+.voltar {
+  text-decoration: none;
+  color: #4f614f;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.voltar:hover {
+  color: #e77c8c;
+}
+
+.pagina-arranjos h1 {
+  margin-top: 30px;
+  font-size: 60px;
+  color: #4f614f;
+}
+
+.pagina-arranjos p {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #666;
+  max-width: 700px;
+  line-height: 1.6;
+}

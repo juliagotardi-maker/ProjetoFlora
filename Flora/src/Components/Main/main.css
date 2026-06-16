@@ -106,16 +106,71 @@ main{
 /* SOBRE */
 
 .sobre{
-  padding:80px 8%;
+  padding: 80px 8%;
 }
 
 .sobre-conteudo{
+<<<<<<< Updated upstream
   background:#5e6b5e;
   color:white;
 
   padding:60px;
 
   border-radius:30px;
+=======
+  background: #667362;
+  color: white;
+
+  border-radius: 35px;
+
+  padding: 60px;
+
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sobre-conteudo p{
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.sobre-conteudo h2{
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.sobre-conteudo span{
+  display: block;
+
+  font-size: 22px;
+  max-width: 700px;
+
+  margin-bottom: 35px;
+}
+
+.sobre-conteudo button{
+  background: #d98fa3;
+  color: white;
+
+  border: none;
+  border-radius: 30px;
+
+  padding: 15px 30px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.sobre-conteudo button:hover{
+  background: #c77a90;
+  transform: translateY(-3px);
+>>>>>>> Stashed changes
 }
 
 .sobre-conteudo h2{
