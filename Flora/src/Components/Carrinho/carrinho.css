@@ -1,0 +1,50 @@
+.card-produto {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card-produto:hover {
+  transform: translateY(-5px);
+}
+
+.produto-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.produto-info {
+  padding: 15px;
+}
+
+.produto-info h3 {
+  color: #4f614f;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.preco {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d98692;
+  margin-bottom: 15px;
+}
+
+.btn-carrinho {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: #d98692;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-carrinho:hover {
+  background: #c97583;
+}
