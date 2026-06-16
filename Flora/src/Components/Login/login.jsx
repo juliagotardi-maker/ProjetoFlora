@@ -1,7 +1,9 @@
 import "./login.css";
-import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer/Footer";
-import Main from "../../Components/Main/Main";
+
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import Main from "../Main/Main";
+
 import { useState } from "react";
 import axios from "axios";
 import { FaEye, FaEyeSlash } from "react-icons/fa";

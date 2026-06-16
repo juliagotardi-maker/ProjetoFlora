@@ -16,11 +16,11 @@ export default function Footer() {
 
       <div className="redes">
 
-        <a href="#">
+        <a href="https://www.instagram.com/">
           Instagram
         </a>
 
-        <a href="#">
+        <a href="https://web.whatsapp.com/">
           WhatsApp
         </a>
 

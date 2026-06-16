@@ -23,33 +23,28 @@ export default function Carrossel() {
   useEffect(() => {
     const intervalo = setInterval(() => {
       proximo();
-    }, 8000);
+    }, 5000);
 
     return () => clearInterval(intervalo);
   }, []);
 
   return (
-    <div className="carrossel">
+    <section className="carrossel">
+
       <img
         src={imagens[index]}
-        alt={`Banner ${index + 1}`}
+        alt="Banner Flora"
         className="fotos"
       />
 
-      <button
-        id="voltar"
-        onClick={voltar}
-      >
-      
+      <button className="btn-carrossel left" onClick={voltar}>
+        ❮
       </button>
 
-      <button
-        id="ir"
-        onClick={proximo}
-      >
-        
-
+      <button className="btn-carrossel right" onClick={proximo}>
+        ❯
       </button>
-    </div>
+
+    </section>
   );
 }

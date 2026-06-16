@@ -9,6 +9,7 @@ import Buques from "./Pages/Buques/Buques";
 import Arranjos from "./Pages/Arranjos/Arranjos";
 import Paisagismo from "./Pages/Paisagismo/Paisagismo";
 import Presentes from "./Pages/Presentes/Presentes";
+
 function Home() {
   return (
     <>
@@ -25,9 +26,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/main" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/buques" element={<Buques />} />
+        <Route path="/main" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

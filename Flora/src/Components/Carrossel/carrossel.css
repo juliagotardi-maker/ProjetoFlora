@@ -1,7 +1,6 @@
 .carrossel{
-  width: 100vw;
+  width: 100%;
   position: relative;
-  margin-left: calc(50% - 50vw);
 }
 
 .fotos{
@@ -10,39 +9,38 @@
   display: block;
 }
 
-#ir,
-#voltar{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+/* BOTÕES */
+.btn-carrossel{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
 
-  width: 45px;
-  height: 45px;
+  width:45px;
+  height:45px;
 
-  border: none;
-  border-radius: 50%;
+  border:none;
+  border-radius:50%;
 
-  background: rgba(255,255,255,.8);
+  background:rgba(255,255,255,0.8);
+  color:#5e6b5e;
 
-  cursor: pointer;
+  font-size:22px;
+  font-weight:bold;
 
-  font-size: 22px;
-  font-weight: bold;
+  cursor:pointer;
 
-  z-index: 10;
+  transition:.3s;
 }
 
-#voltar{
-  left: 20px;
+.btn-carrossel:hover{
+  background:#d98fa3;
+  color:white;
 }
 
-#ir{
-  right: 20px;
+.btn-carrossel.left{
+  left:20px;
 }
 
-#ir:hover,
-#voltar:hover{
-  background: #d98fa3;
-  color: white;
+.btn-carrossel.right{
+  right:20px;
 }
-

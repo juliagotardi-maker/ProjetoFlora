@@ -2,109 +2,48 @@ main{
   background:#faf6f1;
 }
 
-/* HERO */
-
-.hero{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  padding:80px 8%;
-
-  gap:50px;
-}
-
-.hero-text{
-  width:45%;
-}
-
-.hero-text span{
-  color:#d98fa3;
-  font-weight:600;
-}
-
-.hero-text h1{
-  font-size:75px;
-  color:#5e6b5e;
-  line-height:1;
-
-  margin:20px 0;
-}
-
-.hero-text p{
-  font-size:22px;
-  color:#666;
-  margin-bottom:30px;
-}
-
-.hero-text button{
-  background:#d98fa3;
-  color:white;
-
-  border:none;
-  border-radius:35px;
-
-  padding:16px 35px;
-
-  cursor:pointer;
-}
-
-.Carrossel-image img{
-  width:70%;
-}
-
-.hero-image img{
-  width:100%;
-  border-radius:25px;
-}
-
 /* CATEGORIAS */
-
 .categorias{
   padding:80px 8%;
   text-align:center;
 }
 
-.subtitulo{
-  color:#d98fa3;
-  font-weight:bold;
-}
-
-.categorias h2{
-  color:#5e6b5e;
-  font-size:50px;
-
-  margin-bottom:50px;
-}
-
 .categoria-grid{
   display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+}
 
-  grid-template-columns:
-  repeat(auto-fit,minmax(220px,1fr));
+/* PRODUTOS */
+.produtos{
+  padding:60px 8%;
+  text-align:center;
+}
 
+.produtos h2{
+  color:#5e6b5e;
+  margin-bottom:30px;
+}
+
+.produtos-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:20px;
 }
 
-
-.categoria-card{
+.produto-card{
   background:white;
-
-  padding:40px 20px;
-
-  border-radius:25px;
-
-  box-shadow:0 4px 15px rgba(0,0,0,.08);
-
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
   transition:.3s;
 }
 
-.categoria-card:hover{
+.produto-card:hover{
   transform:translateY(-5px);
 }
 
 /* SOBRE */
-
 .sobre{
   padding: 80px 8%;
 }
@@ -113,9 +52,7 @@ main{
 <<<<<<< Updated upstream
   background:#5e6b5e;
   color:white;
-
   padding:60px;
-
   border-radius:30px;
 =======
   background: #667362;
@@ -173,84 +110,12 @@ main{
 >>>>>>> Stashed changes
 }
 
-.sobre-conteudo h2{
-  font-size:50px;
-  margin:20px 0;
-}
-
-.sobre-conteudo span{
-  display:block;
-  max-width:600px;
-
-  margin-bottom:30px;
-}
-
-.sobre-conteudo button{
-  background:#d98fa3;
-  color:white;
-
-  border:none;
-  border-radius:30px;
-
-  padding:15px 30px;
-
-  cursor:pointer;
-}
-
 /* BENEFÍCIOS */
-
 .beneficios{
-  background:white;
-
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
   padding:40px 8%;
-
-  text-align:center;
-
-  color:#5e6b5e;
-}
-
-@media(max-width:900px){
-
-  .hero{
-    flex-direction:column;
-  }
-
-  .hero-text,
-  .hero-image{
-    width:100%;
-  }
-
-  .hero-text h1{
-    font-size:50px;
-  }
-
-  .categoria-grid{
-    grid-template-columns:1fr;
-  }
-
-  .beneficios{
-    grid-template-columns:1fr;
-    gap:20px;
-  }
-}
-.mais-vendidos{
-  padding:80px 8%;
-}
-
-.mais-vendidos h2{
   text-align:center;
   color:#5e6b5e;
-
-  margin-bottom:40px;
-}
-
-.produtos-grid{
-  display:grid;
-  grid-template-columns:
-  repeat(auto-fit,minmax(250px,1fr));
-
-  gap:25px;
 }

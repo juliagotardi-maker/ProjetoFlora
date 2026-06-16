@@ -8,19 +8,16 @@ export default function Header() {
   return (
     <>
       <div className="top-bar">
-        Localizados em Lençóis Paulista
+        Rua dos Bobos, n°0 - Bairro da Alegria - Lençóis Paulista - SP
       </div>
 
       <header className="header">
 
-
-        <a href="#">
-          <img
-            src={logo}
-            alt="Flora"
-            className="logo"
-          />
-        </a>
+        <img
+          src={logo}
+          alt="Flora"
+          className="logo"
+        />
 
         <nav className="menu">
           <a href="#">Buquês</a>
