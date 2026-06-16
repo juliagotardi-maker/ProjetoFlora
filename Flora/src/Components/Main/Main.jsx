@@ -1,5 +1,7 @@
 import "./main.css";
 
+import { Link } from "react-router-dom";
+
 import Carrossel from "../Carrossel/Carrossel";
 import CardCategoria from "../Cards/Card";
 
@@ -20,13 +22,33 @@ export default function Main() {
 
         <div className="categoria-grid">
 
-          <CardCategoria imagem={buque} titulo="Buquês" />
+          <Link to="/buques" className="link-categoria">
+            <CardCategoria
+              imagem={buque}
+              titulo="Buquês"
+            />
+          </Link>
 
-          <CardCategoria imagem={arranjo} titulo="Arranjos" />
+          <Link to="/arranjos" className="link-categoria">
+            <CardCategoria
+              imagem={arranjo}
+              titulo="Arranjos"
+            />
+          </Link>
 
-          <CardCategoria imagem={paisagismo} titulo="Paisagismo" />
+          <Link to="/paisagismo" className="link-categoria">
+            <CardCategoria
+              imagem={paisagismo}
+              titulo="Paisagismo"
+            />
+          </Link>
 
-          <CardCategoria imagem={presente} titulo="Cestas & Presentes" />
+          <Link to="/presentes" className="link-categoria">
+            <CardCategoria
+              imagem={presente}
+              titulo="Cestas & Presentes"
+            />
+          </Link>
 
         </div>
 
@@ -37,15 +59,23 @@ export default function Main() {
 
         <div className="sobre-conteudo">
 
-          <p>SOBRE NÓS</p>
+          <p className="sobre-titulo">
+            SOBRE NÓS
+          </p>
 
-          <h2>Mais que flores, criamos experiências</h2>
+          <h2>
+            Mais que flores,
+            criamos experiências
+          </h2>
 
-          <span>
-            Unimos flores, plantas e paisagismo para levar beleza e significado até você.
-          </span>
+          <p className="sobre-texto">
+            Unimos flores, plantas e paisagismo para levar beleza,
+            significado e momentos especiais até você.
+          </p>
 
-          <button>CONHEÇA NOSSA HISTÓRIA</button>
+          <button>
+            CONHEÇA NOSSA HISTÓRIA
+          </button>
 
         </div>
 
@@ -55,9 +85,10 @@ export default function Main() {
       <section className="beneficios">
 
         <div>📍 Localizada em Lençóis Paulista - São Paulo</div>
+
         <div>📅 Agendamento flexível</div>
+
         <div>💳 Parcele em até 6x</div>
-        <div>🎁 Embalagem premium</div>
 
       </section>
 
