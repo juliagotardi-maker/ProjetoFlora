@@ -27,10 +27,10 @@ export default function Arranjos() {
         <Carrinho imagem={arranjo2} nome="Arranjo Ana" preco={159.90} />
         <Carrinho imagem={arranjo3} nome="Arranjo Maria Antônia" preco={199.90} />
         <Carrinho imagem={arranjo4} nome="Arranjo Ângela" preco={249.90} />
-        <Carrinho imagem={arranjo1} nome="Arranjo Helena" preco={189.90} />
-        <Carrinho imagem={arranjo2} nome="Arranjo Isabel" preco={159.90} />
-        <Carrinho imagem={arranjo3} nome="Arranjo Luzia" preco={199.90} />
-        <Carrinho imagem={arranjo4} nome="Arranjo Elza" preco={249.90} />
+        <Carrinho imagem={arranjo5} nome="Arranjo Helena" preco={189.90} />
+        <Carrinho imagem={arranjo6} nome="Arranjo Isabel" preco={159.90} />
+        <Carrinho imagem={arranjo7} nome="Arranjo Luzia" preco={199.90} />
+        <Carrinho imagem={arranjo8} nome="Arranjo Elza" preco={249.90} />
 
       </div>
 
