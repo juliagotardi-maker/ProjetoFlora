@@ -6,8 +6,7 @@ import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
 import Cadastro from "./Components/Cadastro/Cadastro";
 
-import Pagamento from "./Pages/Pagamento/Pagamento";
-import Carrinho from "./Pages/Carrinho/Carrinho";
+import Carrinho from "./Components/Carrinho/Carrinho";
 
 function Home() {
   return (
@@ -28,8 +27,7 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
-        <Route path="/presentes" element={<Presentes />} />
-        <Route path="/minhas-compras" element={<Minhas_Compras />} />
+        <Route path="/carrinho" element={<Carrinho />} />
       </Routes>
     </BrowserRouter>
   );
