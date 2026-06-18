@@ -1,0 +1,127 @@
+.cadastro-container {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f5f1;
+  padding: 40px;
+}
+
+.cadastro-form {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cadastro-form h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #5e6b5e;
+}
+
+.cadastro-form input {
+  padding: 15px;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.cadastro-form input:focus {
+  outline: none;
+  border-color: #d98fa3;
+  box-shadow: 0 0 0 3px rgba(217, 143, 163, 0.2);
+}
+
+.senha-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.senha-container input {
+  width: 100%;
+  padding-right: 45px;
+}
+
+.senha-container span {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  color: #777;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+}
+
+.senha-container span:hover {
+  color: #d98fa3;
+}
+
+.msg {
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.msg.sucesso {
+  background: #e8f8ea;
+  color: #2e7d32;
+  border: 1px solid #81c784;
+}
+
+.msg.erro {
+  background: #ffeaea;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+.cadastro-form button {
+  width: 100%;
+  padding: 15px;
+
+  border-radius: 12px;
+  border: none;
+
+  background: #5e6b5e;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cadastro-form button:hover {
+  background: #d98fa3;
+}
+
+.login-link {
+  text-align: center;
+}
+
+.login-link p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.voltar-login {
+  background: transparent !important;
+  color: #d98fa3 !important;
+  border: 2px solid #d98fa3 !important;
+}
+
+.voltar-login:hover {
+  background: #d98fa3 !important;
+  color: white !important;
+}

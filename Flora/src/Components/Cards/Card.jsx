@@ -42,7 +42,7 @@ export default function Card({ produto }) {
             navigate(`/produto/${produto.id_produto}`);
           }}
         >
-          Ver produto
+          Adicionar ao carrinho
         </button>
       </div>
     </div>

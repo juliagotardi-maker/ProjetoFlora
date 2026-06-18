@@ -1,7 +1,6 @@
 import "./login.css";
 import Header_login from "../Header_login/Header_login";
 import Footer from "../Footer/Footer";
-import Main from "../Main/Main";
 import { useState } from "react";
 import axios from "axios";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -34,12 +33,17 @@ export default function Login() {
         { email, senha }
       );
 
-      setMensagem(response.data.mensagem || "Login realizado com sucesso!");
+      setMensagem(
+        response.data.mensagem ||
+        "Login realizado com sucesso!"
+      );
+
       setTipoMensagem("sucesso");
 
-      localStorage.setItem("usuario", JSON.stringify(response.data));
-
-      navigate("/Main");
+      localStorage.setItem(
+        "usuario",
+        JSON.stringify(response.data)
+      );
 
       navigate("/Main");
     } catch (error) {
@@ -86,14 +90,18 @@ export default function Login() {
           </div>
 
           {mostrarAviso && (
-            <p className="aviso">Preencha todos os campos!</p>
+            <p className="aviso">
+              Preencha todos os campos!
+            </p>
           )}
 
-          <button type="submit">Entrar 
+          <button type="submit">
+            Entrar
           </button>
 
           <div className="register">
             <p>Não tem conta ainda?</p>
+
             <button
               type="button"
               className="register-btn"

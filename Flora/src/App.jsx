@@ -23,11 +23,14 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/Main" element={<Home />} />
+
         <Route path="/login" element={<Login />} />
         <Route path="/carrinho" element={<Carrinho />} />
         <Route path="/pagamento" element={<Pagamento />} />
    
+
       </Routes>
     </BrowserRouter>
   );
