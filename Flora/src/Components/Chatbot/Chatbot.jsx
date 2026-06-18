@@ -1,8 +1,6 @@
   import { useState } from "react";
-  import axios from "axios";
   import "./chatbot.css";
   import logo from "../../assets/logo.png";
-  
   export default function ChatBot() {
     const [aberto, setAberto] = useState(false);
     const [mensagem, setMensagem] = useState("");
@@ -26,76 +24,26 @@
         return "📍 Todos os pedidos são retirados em nossa loja de Lençóis Paulista, Rua dos Bobos,n° 0 - Bairro da Alegria";
       return "🌸 Posso ajudar com buquês, plantas, presentes, horário retirada e pagamento.";
     }
-
-
-    async function enviarMensagem(texto = mensagem) {
-
+    function enviarMensagem(texto = mensagem) {
       if (!texto.trim()) return;
-        
-      const textoDigitado = texto;
-        
       setMensagens((prev) => [
         ...prev,
         {
           autor: "user",
-          texto: textoDigitado
+          texto
         }
       ]);
-    
       setMensagem("");
-    
-      const respostasRapidas = [
-        "Buquê",
-        "Planta",
-        "Presente",
-        "Horário",
-        "Retirada"
-      ];
-    
-      if (respostasRapidas.includes(textoDigitado)) {
-      
+      setTimeout(() => {
         setMensagens((prev) => [
           ...prev,
           {
             autor: "bot",
-            texto: responder(textoDigitado)
+            texto: responder(texto)
           }
         ]);
-      
-        return;
-      }
-    
-      try {
-      
-        const response = await axios.post(
-          "http://localhost:5002/api/Chat",
-          {
-            mensagem: textoDigitado
-          }
-        );
-      
-        setMensagens((prev) => [
-          ...prev,
-          {
-            autor: "bot",
-            texto: response.data.resposta
-          }
-        ]);
-      
-      } catch (erro) {
-
-    setMensagens((prev) => [
-      ...prev,
-      {
-        autor: "bot",
-        texto:
-          "🌷 Desculpe, não consegui me conectar à Lua neste momento."
-      }
-    ]);
-
-    console.error(erro);
-  }
-}
+      }, 600);
+    }
     return (
       <>
         <button
