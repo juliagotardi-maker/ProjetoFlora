@@ -1,83 +1,34 @@
 import "./main.css";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import { useEffect, useState } from "react";
+import Carrossel from "../Carrossel/Carrossel";
+import Card from "../Cards/Card";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
-export default function MinhasCompras() {
-  const [compras, setCompras] = useState([]);
-  const [carregando, setCarregando] = useState(true);
+export default function Main() {
+  const [produtos, setProdutos] = useState([]);
 
   useEffect(() => {
-    carregarCompras();
+    axios
+      .get("http://localhost:5002/api/Produto")
+      .then((res) => setProdutos(res.data))
+      .catch((err) => console.log("ERRO:", err));
   }, []);
 
-  const carregarCompras = async () => {
-    try {
-      const usuario = JSON.parse(
-        localStorage.getItem("usuario")
-      );
-
-      if (!usuario) return;
-
-      const response = await axios.get(
-        `http://localhost:5002/api/MinhasCompras/${usuario.id_usuario}`
-      );
-
-      setCompras(response.data);
-    } catch (error) {
-      console.log("Erro:", error);
-    } finally {
-      setCarregando(false);
-    }
-  };
-
   return (
-    <>
-      <Header />
+    <main className="main_pag_inicial">
+      <Carrossel />
 
-      <main className="compras-page">
-        <h1>Minhas Compras</h1>
+      <section className="produtos-section">
+        <h2 className="titulo-produtos">Mais vendidos</h2>
 
-        {carregando && (
-          <p>Carregando compras...</p>
-        )}
+        <div className="produtos-grid">
+          {produtos.length === 0 && <p>Carregando produtos...</p>}
 
-        {!carregando && compras.length === 0 && (
-          <p>Nenhuma compra encontrada.</p>
-        )}
-
-        {compras.map((compra) => (
-          <div
-            key={compra.id_minhas_compras}
-            className="compra-card"
-          >
-            <div className="compra-header">
-              <h3>
-                Pedido #
-                {compra.id_minhas_compras}
-              </h3>
-
-              <span
-                className={`status ${compra.status_compra?.toLowerCase()}`}
-              >
-                {compra.status_compra}
-              </span>
-            </div>
-
-            <p>
-              Valor Total:
-              <strong>
-                {" "}
-                R$
-                {Number(compra.valor).toFixed(2)}
-              </strong>
-            </p>
-          </div>
-        ))}
-      </main>
-
-      <Footer />
-    </>
+          {produtos.map((p) => (
+            <Card key={p.id_produto} produto={p} />
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }

@@ -4,10 +4,19 @@ import conta from "../../assets/Conta.png";
 import carrinho from "../../assets/carrinho.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { isLoggedIn, getUser, logout } from "../../Services/auth";
 
 export default function Header() {
   const [abrirPopup, setAbrirPopup] = useState(false);
   const navigate = useNavigate();
+
+  const user = getUser() || {};
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+    window.location.reload();
+  };
 
   return (
     <>
@@ -29,11 +38,7 @@ export default function Header() {
 
           <div className="carrinho-container">
             <span className="badge">0</span>
-            <img
-              src={carrinho}
-              alt="Carrinho"
-              className="icon-compra"
-            />
+            <img src={carrinho} alt="Carrinho" className="icon-compra" />
           </div>
 
           <div className="conta-container">
@@ -46,9 +51,19 @@ export default function Header() {
 
             {abrirPopup && (
               <div className="popup-conta">
-                <button onClick={() => navigate("/login")}>
-                  Fazer login
-                </button>
+                {isLoggedIn() ? (
+                  <>
+                    <p>Olá, {user.nome || "usuário"}</p>
+
+                    <button onClick={handleLogout}>
+                      Sair
+                    </button>
+                  </>
+                ) : (
+                  <button onClick={() => navigate("/login")}>
+                    Fazer login
+                  </button>
+                )}
               </div>
             )}
           </div>

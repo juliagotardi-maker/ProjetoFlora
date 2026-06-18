@@ -1,5 +1,5 @@
 import "./Cadastro.css";
-import Header_login from "../Header_login/Header_login";
+import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { useState } from "react";
 import axios from "axios";

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./Card.css";
 
-export default function Card({ produto }) {
+export default function Card({ produto, onAddToCart }) {
   const navigate = useNavigate();
 
   if (!produto) return null;
@@ -12,10 +12,7 @@ export default function Card({ produto }) {
       onClick={() => navigate(`/produto/${produto.id_produto}`)}
     >
       <div className="card-imagem">
-        <img
-          src={produto.imagem}
-          alt={produto.nome}
-        />
+        <img src={produto.imagem} alt={produto.nome} />
       </div>
 
       <div className="card-info">
@@ -39,7 +36,12 @@ export default function Card({ produto }) {
           className="btn-ver"
           onClick={(e) => {
             e.stopPropagation();
-            navigate(`/produto/${produto.id_produto}`);
+
+            if (onAddToCart) {
+              onAddToCart(produto);
+            }
+
+            navigate("/carrinho");
           }}
         >
           Adicionar ao carrinho

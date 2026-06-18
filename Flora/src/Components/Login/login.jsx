@@ -1,5 +1,5 @@
 import "./login.css";
-import Header_login from "../Header_login/Header_login";
+import Header_login from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { useState } from "react";
 import axios from "axios";
@@ -33,23 +33,19 @@ export default function Login() {
         { email, senha }
       );
 
-      setMensagem(
-        response.data.mensagem ||
-        "Login realizado com sucesso!"
-      );
+      const { token, usuario, mensagem } = response.data;
 
+      localStorage.setItem("token", token);
+      localStorage.setItem("usuario", JSON.stringify(usuario));
+
+      setMensagem(mensagem || "Login realizado com sucesso!");
       setTipoMensagem("sucesso");
-
-      localStorage.setItem(
-        "usuario",
-        JSON.stringify(response.data)
-      );
 
       navigate("/Main");
     } catch (error) {
       const mensagemErro =
-        error.response?.data?.mensagem ||
         error.response?.data?.message ||
+        error.response?.data?.mensagem ||
         "Erro ao fazer login";
 
       setMensagem(mensagemErro);
@@ -59,7 +55,7 @@ export default function Login() {
 
   return (
     <>
-      <Header_login />
+      <Header />
 
       <div className="login-container">
         <form className="login-form" onSubmit={handleSubmit}>
