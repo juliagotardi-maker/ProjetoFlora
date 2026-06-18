@@ -10,6 +10,7 @@ import Buques from "./Pages/Buque/Buques";
 import Arranjos from "./Pages/Arranjos/Arranjos";
 import Paisagismo from "./Pages/Paisagismo/Paisagismo";
 import Presentes from "./Pages/Presentes/Presentes";
+import Carrinho from "./Components/Carrinho/Carrinho";
 
 function Home() {
   return (

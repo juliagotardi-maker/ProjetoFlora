@@ -1,0 +1,73 @@
+.pagamento-page{
+  min-height:100vh;
+  background:#faf6f1;
+
+  padding:60px 8%;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.pagamento-page h1{
+  color:#5e6b5e;
+  margin-bottom:40px;
+}
+
+.pagamento-page form,
+.pagamento-page{
+  width:100%;
+  max-width:600px;
+}
+
+.pagamento-page input,
+.pagamento-page select{
+  width:100%;
+
+  padding:15px;
+
+  margin-bottom:15px;
+
+  border:1px solid #ddd;
+  border-radius:12px;
+
+  font-size:15px;
+}
+
+.pagamento-page input:focus,
+.pagamento-page select:focus{
+  outline:none;
+  border-color:#d98fa3;
+}
+
+.pagamento-page button{
+  width:100%;
+
+  padding:15px;
+
+  border:none;
+  border-radius:30px;
+
+  background:#d98fa3;
+  color:white;
+
+  font-size:16px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.pagamento-page button:hover{
+  background:#c7798e;
+  transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+
+  .pagamento-page{
+    padding:40px 5%;
+  }
+
+}
