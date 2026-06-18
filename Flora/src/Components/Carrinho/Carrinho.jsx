@@ -1,29 +1,27 @@
-import "./Carrinho.css";
+import "./carrinho.css";
 
-export default function Carrinho({ imagem, nome, preco }) {
+export default function Carrinho() {
   return (
-    <div className="card-produto">
+    <main className="carrinho-page">
 
-      <img
-        src={imagem}
-        alt={nome}
-        className="produto-img"
-      />
+      <h1>Meu Carrinho</h1>
 
-      <div className="produto-info">
-
-        <h3>{nome}</h3>
-
-        <p className="preco">
-          R$ {preco.toFixed(2)}
-        </p>
-
-        <button className="btn-carrinho">
-          Adicionar ao carrinho
-        </button>
-
+      <div className="produto">
+        <h3>Buquê Rosa Premium</h3>
+        <p>Quantidade: 1</p>
+        <span>R$ 149,90</span>
       </div>
 
-    </div>
+      <div className="total">
+        <h2>Total: R$ 149,90</h2>
+      </div>
+
+      <a href="/pagamento">
+        <button>
+          Continuar Compra
+        </button>
+      </a>
+
+    </main>
   );
 }

@@ -6,8 +6,8 @@ import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
 import Cadastro from "./Components/Cadastro/Cadastro";
 
-import Presentes from "./Pages/Presentes/Presentes";
-import Carrinho from ".pages/Carrinho/Minhas_compras";
+import Pagamento from "./Pages/Pagamento/Pagamento";
+import Carrinho from "./Pages/Carrinho/Carrinho";
 
 function Home() {
   return (
