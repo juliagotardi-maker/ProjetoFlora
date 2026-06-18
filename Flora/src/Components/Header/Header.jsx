@@ -27,8 +27,12 @@ export default function Header() {
 
         <div className="header-icons">
 
-          <div className="carrinho-container">
+          <div
+            className="carrinho-container"
+            onClick={() => navigate("/carrinho")}
+          >
             <span className="badge">0</span>
+            
             <img
               src={carrinho}
               alt="Carrinho"

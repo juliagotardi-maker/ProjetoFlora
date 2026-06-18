@@ -1,0 +1,201 @@
+.chat-btn{
+  position:fixed;
+  right:25px;
+  bottom:25px;
+
+  width:70px;
+  height:70px;
+
+  border:none;
+  border-radius:50%;
+
+  background:#d98fa3;
+  color:white;
+
+  font-size:28px;
+
+  cursor:pointer;
+
+  z-index:999;
+
+  box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.chat-container{
+  position:fixed;
+
+  right:25px;
+  bottom:110px;
+
+  width:380px;
+  height:600px;
+
+  background:white;
+
+  border-radius:25px;
+
+  overflow:hidden;
+
+  display:flex;
+  flex-direction:column;
+
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+  z-index:999;
+}
+
+.chat-header{
+  background:#ffffff;
+
+  color: #d98fa3;
+
+  padding:15px;
+
+  display:flex;
+  align-items:center;
+
+  gap:15px;
+}
+
+.chat-header img{
+  width:55px;
+  height:55px;
+
+  border-radius:50%;
+}
+
+.chat-header h3{
+  margin:0;
+}
+
+.chat-header span{
+  font-size:12px;
+}
+
+.chat-body{
+  flex:1;
+
+  padding:15px;
+
+  background:#faf6f1;
+
+  overflow-y:auto;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:10px;
+}
+
+.bot-message{
+  background:white;
+
+  color:#5e6b5e;
+
+  padding:12px;
+
+  border-radius:15px;
+
+  max-width:80%;
+}
+
+.user-message{
+  background:#d98fa3;
+
+  color:white;
+
+  padding:12px;
+
+  border-radius:15px;
+
+  max-width:80%;
+
+  margin-left:auto;
+}
+
+.opcoes-rapidas{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:8px;
+
+  padding:12px;
+
+  border-top:1px solid #eee;
+
+  background:white;
+}
+
+.opcoes-rapidas button{
+  border:none;
+
+  background:#d98fa3;
+
+  color:white;
+
+  padding:8px 12px;
+
+  border-radius:20px;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.opcoes-rapidas button:hover{
+  background:#5e6b5e;
+}
+
+.chat-footer{
+  display:flex;
+
+  gap:10px;
+
+  padding:12px;
+
+  border-top:1px solid #eee;
+
+  background:white;
+}
+
+.chat-footer input{
+  flex:1;
+
+  padding:12px;
+
+  border:1px solid #ddd;
+
+  border-radius:25px;
+
+  outline:none;
+}
+
+.btn-enviar{
+  width:45px;
+  height:45px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:#d98fa3;
+
+  color:white;
+
+  cursor:pointer;
+}
+
+.btn-whatsapp{
+  background:#25d366;
+
+  color:white;
+
+  text-decoration:none;
+
+  text-align:center;
+
+  padding:12px;
+
+  font-weight:bold;
+}

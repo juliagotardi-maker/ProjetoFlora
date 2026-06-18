@@ -1,27 +1,28 @@
-import "./pagamento.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Pagamento() {
 
-  function finalizarPedido() {
-    const telefone = "5514996511912";
+  const navigate = useNavigate();
+
+  function finalizarCompra() {
 
     const mensagem =
-      "🌷 Olá! Gostaria de finalizar meu pedido.";
+      "Olá! Gostaria de finalizar meu pedido na Flora.";
 
     window.open(
-      `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`,
+      `https://wa.me/5514996511912?text=${encodeURIComponent(mensagem)}`,
       "_blank"
     );
   }
 
   return (
-    <main className="pagamento-page">
+    <div className="pagamento">
 
       <h1>Pagamento</h1>
 
       <input
         type="text"
-        placeholder="Nome completo"
+        placeholder="Nome"
       />
 
       <input
@@ -29,21 +30,10 @@ export default function Pagamento() {
         placeholder="Telefone"
       />
 
-      <input
-        type="text"
-        placeholder="Hora da da retirada"
-      />
-
-      <select>
-        <option>PIX</option>
-        <option>Cartão de Crédito</option>
-        <option>Cartão de Débito</option>
-      </select>
-
-      <button onClick={finalizarPedido}>
-        Finalizar Pedido
+      <button onClick={finalizarCompra}>
+        Enviar Pedido
       </button>
 
-    </main>
+    </div>
   );
 }

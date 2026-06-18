@@ -4,12 +4,9 @@ import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
-
-import Buques from "./Pages/Buque/Buques";
-import Arranjos from "./Pages/Arranjos/Arranjos";
-import Paisagismo from "./Pages/Paisagismo/Paisagismo";
-import Presentes from "./Pages/Presentes/Presentes";
-import Carrinho from "./Components/Carrinho/Carrinho";
+import ChatBot from "./Components/ChatBot/ChatBot";
+import Carrinho from "./Pages/Carrinho/Carrinho";
+import Pagamento from "./Pages/Pagamento/Pagamento";
 
 function Home() {
   return (
@@ -17,6 +14,7 @@ function Home() {
       <Header />
       <Main />
       <Footer />
+      <ChatBot/>
     </>
   );
 }
@@ -27,11 +25,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-
-        <Route path="/buques" element={<Buques />} />
-        <Route path="/arranjos" element={<Arranjos />} />
-        <Route path="/paisagismo" element={<Paisagismo />} />
-        <Route path="/presentes" element={<Presentes />} />
+        <Route path="/carrinho" element={<Carrinho />} />
+        <Route path="/pagamento" element={<Pagamento />} />
+   
       </Routes>
     </BrowserRouter>
   );
