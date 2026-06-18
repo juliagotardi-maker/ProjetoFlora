@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import Footer from "./Components/Footer/Footer";
-import Login from "./Components/Login/Login";
+import Login from "./Components/login/login";
 import ChatBot from "./Components/ChatBot/ChatBot";
 import Carrinho from "./Pages/Carrinho/Carrinho";
 import Pagamento from "./Pages/Pagamento/Pagamento";
