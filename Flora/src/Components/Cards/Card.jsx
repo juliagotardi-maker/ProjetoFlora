@@ -30,7 +30,7 @@ export default function Card({ produto }) {
         </p>
 
         <p className="estoque">
-          {produto.quantidade >= 0
+          {produto.quantidade > 0
             ? `Em estoque: ${produto.quantidade}`
             : "Sem estoque"}
         </p>
