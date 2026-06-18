@@ -1,5 +1,5 @@
 import "./Cadastro.css";
-import Header_login from "../Header_login/Header_login";
+import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { useState } from "react";
 import axios from "axios";
@@ -77,7 +77,7 @@ export default function Cadastro() {
 
   return (
     <>
-      <Header_login />
+
 
       <div className="cadastro-container">
         <form
@@ -174,7 +174,6 @@ export default function Cadastro() {
         </form>
       </div>
 
-      <Footer />
     </>
   );
 }

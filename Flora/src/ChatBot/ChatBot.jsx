@@ -31,7 +31,7 @@ export default function ChatBot() {
     try {
 
       const response = await fetch(
-        "http://localhost:3001/chat",
+        "http://localhost:5002/Chat",
         {
           method: "POST",
 
@@ -70,7 +70,7 @@ export default function ChatBot() {
 
   return (
     <>
-      {/* BOTÃO */}
+
 
       <div
         className="chat-button"
@@ -79,7 +79,7 @@ export default function ChatBot() {
         💬
       </div>
 
-      {/* CHAT */}
+
 
       {
         open && (

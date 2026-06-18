@@ -1,6 +1,4 @@
 import "./login.css";
-import Header_login from "../Header_login/Header_login";
-import Footer from "../Footer/Footer";
 import { useState } from "react";
 import axios from "axios";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -33,19 +31,12 @@ export default function Login() {
         { email, senha }
       );
 
-      setMensagem(
-        response.data.mensagem ||
-        "Login realizado com sucesso!"
-      );
-
+      setMensagem(response.data.mensagem || "Login realizado com sucesso!");
       setTipoMensagem("sucesso");
 
-      localStorage.setItem(
-        "usuario",
-        JSON.stringify(response.data)
-      );
+      localStorage.setItem("usuario", JSON.stringify(response.data));
 
-      navigate("/Main");
+      navigate("/");
     } catch (error) {
       const mensagemErro =
         error.response?.data?.mensagem ||
@@ -58,62 +49,46 @@ export default function Login() {
   };
 
   return (
-    <>
-      <Header_login />
+    <div className="login-container">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <h2>Login</h2>
 
-      <div className="login-container">
-        <form className="login-form" onSubmit={handleSubmit}>
-          <h2>Login</h2>
+        {mensagem && (
+          <div className={`msg ${tipoMensagem}`}>
+            {mensagem}
+          </div>
+        )}
 
-          {mensagem && (
-            <div className={`msg ${tipoMensagem}`}>
-              {mensagem}
-            </div>
-          )}
+        <input type="email" name="email" placeholder="Digite seu email" />
 
+        <div className="senha-container">
           <input
-            type="email"
-            name="email"
-            placeholder="Digite seu email"
+            type={mostrarSenha ? "text" : "password"}
+            name="senha"
+            placeholder="Digite sua senha"
           />
 
-          <div className="senha-container">
-            <input
-              type={mostrarSenha ? "text" : "password"}
-              name="senha"
-              placeholder="Digite sua senha"
-            />
+          <span onClick={() => setMostrarSenha(!mostrarSenha)}>
+            {mostrarSenha ? <FaEyeSlash /> : <FaEye />}
+          </span>
+        </div>
 
-            <span onClick={() => setMostrarSenha(!mostrarSenha)}>
-              {mostrarSenha ? <FaEyeSlash /> : <FaEye />}
-            </span>
-          </div>
+        {mostrarAviso && <p className="aviso">Preencha todos os campos!</p>}
 
-          {mostrarAviso && (
-            <p className="aviso">
-              Preencha todos os campos!
-            </p>
-          )}
+        <button type="submit">Entrar</button>
 
-          <button type="submit">
-            Entrar
+        <div className="register">
+          <p>Não tem conta ainda?</p>
+
+          <button
+            type="button"
+            className="register-btn"
+            onClick={() => navigate("/cadastro")}
+          >
+            Criar conta
           </button>
-
-          <div className="register">
-            <p>Não tem conta ainda?</p>
-
-            <button
-              type="button"
-              className="register-btn"
-              onClick={() => navigate("/cadastro")}
-            >
-              Criar conta
-            </button>
-          </div>
-        </form>
-      </div>
-
-      <Footer />
-    </>
+        </div>
+      </form>
+    </div>
   );
 }
