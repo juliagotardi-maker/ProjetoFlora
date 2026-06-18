@@ -6,11 +6,8 @@ import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
 import Cadastro from "./Components/Cadastro/Cadastro";
 
-import Buques from "./Pages/Buque/Buques";
-import Arranjos from "./Pages/Arranjos/Arranjos";
-import Paisagismo from "./Pages/Paisagismo/Paisagismo";
 import Presentes from "./Pages/Presentes/Presentes";
-import Carrinho from "./Components/Carrinho/Carrinho";
+import Carrinho from ".pages/Carrinho/Minhas_compras";
 
 function Home() {
   return (
@@ -31,11 +28,8 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
-
-        <Route path="/buques" element={<Buques />} />
-        <Route path="/arranjos" element={<Arranjos />} />
-        <Route path="/paisagismo" element={<Paisagismo />} />
         <Route path="/presentes" element={<Presentes />} />
+        <Route path="/minhas-compras" element={<Minhas_Compras />} />
       </Routes>
     </BrowserRouter>
   );
