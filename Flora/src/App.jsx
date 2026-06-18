@@ -4,6 +4,7 @@ import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
+import Cadastro from "./Components/Cadastro/Cadastro";
 
 import Buques from "./Pages/Buque/Buques";
 import Arranjos from "./Pages/Arranjos/Arranjos";
@@ -24,8 +25,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/Main" element={<Home />} />
+
         <Route path="/login" element={<Login />} />
+        <Route path="/cadastro" element={<Cadastro />} />
 
         <Route path="/buques" element={<Buques />} />
         <Route path="/arranjos" element={<Arranjos />} />
